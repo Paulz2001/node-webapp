@@ -8,6 +8,8 @@
 
 <!--CSS-->
 <link rel="stylesheet" href="/jquery-ui/themes/base/jquery-ui.css">
+<!--Tailwind CSS-->
+<link rel="stylesheet" href="/styles/style.css"/>
 
 <!--Javascript-->
 <script src="/jquery/jquery.min.js"></script>
@@ -45,7 +47,21 @@
           <div id="myDynamicTable"></div>
         </div>
         <div id="tabs-3">
-        
+
+          <div class="flex justify-center">
+            <div class="rounded-lg shadow-lg bg-white max-w-sm">
+              <a href="#!">
+                <img class="rounded-t-lg" src="/images/โดราเอ.png" alt=""/>
+              </a>
+              <div class="p-6">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">I'm pancake</h5>
+                <p class="text-gray-700 text-base mb-4">
+                  Zzz.Zzz 
+                </p>
+                <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+              </div>
+            </div>
+          </div>
         </div>
     </div><!-- tabs-->
 
@@ -65,7 +81,7 @@ $('#btnSubmit').click( function(){
     headers: { 
      'Content-Type': 'application/json',
      "Accepts": "application/json",
-     "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29scy5lY3BlLm51LmFjLnRoXC9uZXR3b3JrXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjU5MDg5MDYxLCJleHAiOjE2NTkwOTI2NjEsIm5iZiI6MTY1OTA4OTA2MSwianRpIjoidVhLRUM5Vk1OdGRiamppYSIsInN1YiI6ODAsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Q95pC2bMtRwxltD9nDzqLAzqH8TT6pjjM4NDZQWKm7g", 
+     "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29scy5lY3BlLm51LmFjLnRoXC9uZXR3b3JrXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjU5NDI5ODQwLCJleHAiOjE2NTk0MzM0NDAsIm5iZiI6MTY1OTQyOTg0MCwianRpIjoiZ25rcnVTUTFrZHgwMVJOYiIsInN1YiI6ODAsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jAL9oMICpMPYJdAjeFijeNond7cQlkY-WrhHM24smiw", 
     },
     data:JSON.stringify( { "name": $('#txtName').val(), "student_id": $('#txtStudentID').val(), "email": $('#txtEmail').val(), "password": $('#txtPassword').val() } ),
     success: function(data){
@@ -99,7 +115,7 @@ $('#btnSubmit').click( function(){
            headers: { 
              'Content-Type': 'application/json',
              "Accepts": "application/json",
-             "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29scy5lY3BlLm51LmFjLnRoXC9uZXR3b3JrXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjU5MDg5MDYxLCJleHAiOjE2NTkwOTI2NjEsIm5iZiI6MTY1OTA4OTA2MSwianRpIjoidVhLRUM5Vk1OdGRiamppYSIsInN1YiI6ODAsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Q95pC2bMtRwxltD9nDzqLAzqH8TT6pjjM4NDZQWKm7g ",
+             "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29scy5lY3BlLm51LmFjLnRoXC9uZXR3b3JrXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjU5NDI5ODQwLCJleHAiOjE2NTk0MzM0NDAsIm5iZiI6MTY1OTQyOTg0MCwianRpIjoiZ25rcnVTUTFrZHgwMVJOYiIsInN1YiI6ODAsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jAL9oMICpMPYJdAjeFijeNond7cQlkY-WrhHM24smiw ",
            },
            success: function(data){
              console.log(data);
